@@ -1,0 +1,22 @@
+.subtitulo {
+    color: rgb(197, 227, 198);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+
+.imagen {
+    height: 22.5rem;
+    width: 25rem;
+    border-radius: 50%;
+    align-items: center;
+
+}
+
+.nombre {
+    color: rgb(197, 227, 198);
+}
+
+.footer {
+    color: rgb(197, 227, 198);
+    text-align: center;
+}

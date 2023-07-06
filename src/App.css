@@ -1,0 +1,16 @@
+.App {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Titulo {
+   font-size: 3em;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-shadow: 2px 2px 4px rgba(3, 3, 3, 0.3);
+  color: rgb(0, 0, 0);
+  background-color: rgba(0, 252, 126, 0.5);
+}
