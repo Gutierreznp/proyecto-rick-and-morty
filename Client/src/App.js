@@ -1,5 +1,5 @@
 import './App.css';
-import Cards from './components/Cards/Cards.jsx';
+import Cards from './components/Cards/Cards';
 import Nav from './components/Nav/Nav'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -35,7 +35,7 @@ function App() {
       if (charId.includes(parseInt(id))) {
          return window.alert('Ya Existe!')
       }
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+      axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
             // if(characters.find((character) => Number(id) === character.id))

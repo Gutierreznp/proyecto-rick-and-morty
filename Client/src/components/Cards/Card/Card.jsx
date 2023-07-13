@@ -45,7 +45,7 @@ function Card({onClose, id, name, status, species, gender, origin, image, addFav
          <h2 className={style.informacion}>{status}</h2>
          <h2 className={style.informacion}>{species}</h2>
          <h2 className={style.informacion}>{gender}</h2>
-         <h2 className={style.informacion}>Origen: {origin}</h2>
+         <h2 className={style.informacion}>Origen: {origin.name}</h2>
          
       </div>
    )
