@@ -15,16 +15,15 @@ function App() {
 
    const navigate = useNavigate();
    const [access, setAccess] = useState(false);
-   const EMAIL = 'ejemplo@gmail.com';
-   const PASSWORD = '123456';
    
    function login(userData) {
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-         setAccess(true);
-         navigate('/home');
-      } else {
-         alert('Email o Password incorrectos');
-      }
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/user/login/';
+      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+         const { access } = data;
+         setAccess(access);
+         access && navigate('/home');
+      });
    }
    
    useEffect(() => {
@@ -35,7 +34,8 @@ function App() {
       if (charId.includes(parseInt(id))) {
          return window.alert('Ya Existe!')
       }
-      axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
+      axios(`http://localhost:3001/character/${id}`).then(({ data }) => {
+         console.log(data);
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
             // if(characters.find((character) => Number(id) === character.id))
