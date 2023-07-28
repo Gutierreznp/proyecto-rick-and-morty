@@ -18,7 +18,7 @@ export const addFav = (character) => {
              payload: data,
           })
    } catch(error) {
-      alert(error.message); 
+      console.log(error.message); 
    } 
    }
     
